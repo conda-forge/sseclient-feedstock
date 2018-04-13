@@ -14,9 +14,7 @@ Summary: Python client library for reading Server Sent Event streams.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/sseclient-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sseclient-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/sseclient-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/sseclient-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/sseclient-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/sseclient-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/sseclient-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sseclient-feedstock)
 
 Current release info
 ====================
