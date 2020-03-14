@@ -1,8 +1,7 @@
 {% set name = "sseclient" %}
-{% set version = "0.0.24" %}
+{% set version = "0.0.25" %}
 {% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "1b4c5119b9381cb6ddaf3236f3f7e1437a14e488d1ed61336873a839788481b0" %}
+{% set hash_val = "ea70273e9610418a8beb2b5cd89bd33c145016fa3e89d4b8a39c8a11a8eac669" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -35,8 +34,9 @@ test:
 about:
   home: https://bitbucket.org/btubbs/sseclient/
   license: MIT
+  license_file: LICENSE
   # license_file: LICENSE not included in MANIFEST.in - see https://bitbucket.org/btubbs/sseclient/pull-requests/10/
-  summary: 'Python client library for reading Server Sent Event streams.'
+  summary: Python client library for reading Server Sent Event streams.
   dev_url: https://bitbucket.org/btubbs/sseclient/src
 
 extra:
