@@ -5,7 +5,7 @@ Home: https://bitbucket.org/btubbs/sseclient/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python client library for reading Server Sent Event streams.
 

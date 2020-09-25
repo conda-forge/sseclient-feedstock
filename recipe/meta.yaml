@@ -1,7 +1,7 @@
 {% set name = "sseclient" %}
-{% set version = "0.0.26" %}
+{% set version = "0.0.27" %}
 {% set compress_type = "tar.gz" %}
-{% set hash_val = "33f45ab71bb6369025d6a1014e15f12774f7ea25b7e80eeb00bd73668d5fefad" %}
+{% set hash_val = "b2fe534dcb33b1d3faad13d60c5a7c718e28f85987f2a034ecf5ec279918c11c" %}
 
 package:
   name: {{ name|lower }}
