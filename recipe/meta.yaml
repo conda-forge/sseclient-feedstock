@@ -1,21 +1,18 @@
 {% set name = "sseclient" %}
-{% set version = "0.0.26" %}
-{% set compress_type = "tar.gz" %}
-{% set hash_val = "33f45ab71bb6369025d6a1014e15f12774f7ea25b7e80eeb00bd73668d5fefad" %}
+{% set version = "0.0.27" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  sha256: {{ hash_val }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b2fe534dcb33b1d3faad13d60c5a7c718e28f85987f2a034ecf5ec279918c11c
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -30,6 +27,10 @@ requirements:
 test:
   imports:
     - sseclient
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://bitbucket.org/btubbs/sseclient/
